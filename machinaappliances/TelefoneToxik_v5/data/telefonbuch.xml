@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<telefonbuch>
+
+    <eintrag nr="060024822452" event="SERVICECALL" jumpto="handy">
+        
+        <handy nr="017814881488" event="SERVICEPORTAL" jumpto="service">
+            <service nr="1" event="VERTRAGSDATEN"></service>
+            <service nr="2" event="MAILBOX" jumpto="questioneins">
+                    <questioneins index="1" event="SERVICEFRAGEEINS" jumpto="answers">
+                        <answers nr="1" query="falsch" jumpback="questioneins"></answers>
+                        <answers nr="2" query="falsch" jumpback="questioneins"></answers>
+                        <answers nr="3" query="richtig" jumpto="questionzwei"></answers>
+                        <answers nr="4" query="falsch" jumpto="service"></answers>
+                    </questioneins>
+                    <questionzwei index="2" event="SERVICEFRAGEZWEI" jumpto="answers">
+                                    <answers nr="1" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="2" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="3" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="4" query="falsch" jumpto="questiondrei"></answers>
+                                    <answers nr="5" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="5" query="falsch" jumpto="questiondrei"></answers>
+                                    <answers nr="6" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="7" query="richtig" jumpback="questioneins"></answers>
+                                    <answers nr="8" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="9" query="falsch" jumpback="questioneins"></answers>
+
+                    </questionzwei>
+                    <questiondrei index="3" event="SERVICEFRAGEDREI" jumpto="answers">
+                                    <answers nr="1" query="richtig" jumpto="questionende">
+                                        <questionende index="4" event="ENTSPERRUNG" jumpto="answers"></questionende>
+                                    </answers>
+                                    <answers nr="2" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="3" query="falsch" jumpback="questioneins"></answers>
+                                    <answers nr="4" query="falsch" jumpback="questioneins"></answers>
+                    </questiondrei>
+            </service>
+
+            <service nr="3" event="KUENDIGUNG"></service>
+        </handy>
+        
+        <handy nr="01788888888" event="MG"></handy>
+
+    </eintrag>
+
+    <eintrag nr="01762251399" event="HOERSPIEL_HYSTERISCHEFRAU"></eintrag>
+
+    <eintrag nr="097793737470" event="TESTEVENT_3"></eintrag>
+
+    <eintrag nr="08461234567" event="TESTEVENT_4"></eintrag>
+    
+    <eintrag nr="348983052" event="TESTEVENT_5"></eintrag>
+
+</telefonbuch>
